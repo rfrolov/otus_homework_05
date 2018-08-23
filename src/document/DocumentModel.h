@@ -7,7 +7,7 @@
 
 struct DocumentModel {
     using handler_t    = uint64_t;                          ///< Тип хендлера примитива.
-    using serialised_t = IPrimitive::serialised_t;           ///< Тип сериализованых данных примитива.
+    using serialised_t = IPrimitive::serialised_t;          ///< Тип сериализованых данных примитива.
     using map_t        = std::map<handler_t, IPrimitive *>; // TODO: написать правильное название и комментарий.
 
     /**
@@ -34,7 +34,7 @@ struct DocumentModel {
     const map_t get_primitives() { return map_; };
 
 private:
-    static const auto max_primitives_   = 1000;     ///< Максимальное количество примитивов в документе.
-    handler_t         handler_ = 0;                 ///< Последный выданный хендлер.
-    map_t             map_;                         ///< Мап сериализованных даннх примитивов.
+    static const auto max_primitives_ = 1000;     ///< Максимальное количество примитивов в документе.
+    handler_t         handler_        = 0;        ///< Последный выданный хендлер.
+    map_t             map_{};                     ///< Мап указателей на созданные примитивы.
 };

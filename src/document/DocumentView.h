@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "../DocumentModel/DocumentModel.h"
+#include "DocumentModel.h"
 
 struct DocumentView {
     void redraw(DocumentModel &model) {

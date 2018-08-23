@@ -5,7 +5,7 @@
 struct IPrimitive {
     using serialised_t = std::string;   ///< Тип сериализованых данных примитива.
 
-    // TODO: Написать коментарий.
+    /// Тип римитива.
     enum class type {
         none,
         dot,

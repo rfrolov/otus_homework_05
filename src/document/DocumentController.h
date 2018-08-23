@@ -2,9 +2,10 @@
 
 #include <memory>
 #include <cassert>
-#include "../DocumentModel/DocumentModel.h"
-#include "../DocumentView/DocumentView.h"
+#include "DocumentModel.h"
+#include "DocumentView.h"
 #include "../primitives/IPrimitive.h"
+#include "../converter/converter.h"
 
 struct DocumentController {
     using handler_t = DocumentModel::handler_t;
@@ -43,10 +44,25 @@ struct DocumentController {
 
     bool import_file(const std::string& fileName) {
         // TODO: Сделать реализацию иморта из разных форматов.
+        // TODO: Переместить в модель.
+        Importer importer{fileName};
+        Importer::result_t primitives{};
+        auto isOk = importer.doConvert(primitives);
+        if(isOk) {
+            for(const auto& it: primitives) {
+                model_->add_primitive(it);
+            }
+        }
+        view_->redraw(*model_);
     }
 
     bool export_file(const std::string &fileName) {
         // TODO: Сделать реализацию экспорта в разные форматы.
+        // TODO: Переместить в модель.
+//        Exporter exporter{fileName};
+//        Exporter::data_t data{new Dot(1, 2), new Line(1, 2, 3, 4), new Triangle(1, 2, 3, 4, 5, 6)};
+//        auto isOk = exporter.doConvert(data);
+
         return true;
     }
 

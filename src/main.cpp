@@ -1,4 +1,4 @@
-#include "DocumentController/DocumentController.h"
+#include "document/DocumentController.h"
 #include "primitives/Dot.h"
 #include "primitives/Line.h"
 #include "primitives/Triangle.h"
@@ -19,13 +19,13 @@ int main(int, char *[]) {
     document_control.delete_primitive(line_h);
 
     std::cout << std::endl << "Export:" << std::endl;
-    document_control.export_file("filename");
+    document_control.export_file("../../test/export.txt");
 
-    std::cout << std::endl << "Import:" << std::endl;
-    document_control.import_file("filename");
+//    std::cout << std::endl << "Import:" << std::endl;
+//    document_control.import_file("../../test/import.txt");
 
-    std::cout << std::endl << "Add triangle:" << std::endl;
-    document_control.add_primitive(new Triangle(1, 2, 3, 4, 5, 6));
-    
+//    std::cout << std::endl << "Add triangle:" << std::endl;
+//    document_control.add_primitive(new Triangle(1, 2, 3, 4, 5, 6));
+
     return 0;
 }
