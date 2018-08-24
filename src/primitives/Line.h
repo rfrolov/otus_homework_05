@@ -3,9 +3,7 @@
 #include "IPrimitive.h"
 #include <array>
 
-/**
- * Линия.
- */
+/// Линия.
 struct Line : public IPrimitive {
     using coordinates_t = std::array<Coordinates, 2>;
 

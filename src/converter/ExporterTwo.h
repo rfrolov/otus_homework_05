@@ -2,6 +2,7 @@
 
 #include "converter.h"
 
+/// Экспортер в формат "два".
 struct ExporterTwo : public AExporter {
 
     /**

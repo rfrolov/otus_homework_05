@@ -2,9 +2,7 @@
 
 #include <vector>
 
-/**
- * Интерфейс примитива.
- */
+/// Интерфейс примитива.
 struct IPrimitive {
     using serialised_t = std::vector<int>;
 
@@ -36,9 +34,7 @@ struct IPrimitive {
     virtual type get_type() = 0;
 };
 
-/**
- * Координаты.
- */
+/// Координаты.
 struct Coordinates {
     Coordinates(int x, int y) : x{x}, y{y} {}
     Coordinates() = default;

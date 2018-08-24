@@ -2,9 +2,7 @@
 
 #include "IPrimitive.h"
 
-/**
- * Точка.
- */
+/// Точка.
 struct Dot : public IPrimitive {
 
     /**
@@ -12,6 +10,7 @@ struct Dot : public IPrimitive {
      * @param coordinates Координаты точки.
      */
     explicit Dot(Coordinates coordinates) : coordinates_{coordinates} {}
+
     Dot() = default;
 
     /**

@@ -6,21 +6,21 @@
 #include "../primitives/IPrimitive.h"
 #include "../converter/converter.h"
 
-/**
- * Модель документа.
- */
+/// Модель документа.
 struct DocumentModel {
+    using primitive_t  = std::shared_ptr<IPrimitive>;
     using handler_t    = uint64_t;
     using serialised_t = IPrimitive::serialised_t;
-    using map_t        = std::map<handler_t, IPrimitive *>;
-    using primitives_t = std::vector<IPrimitive *>;
+    using map_t        = std::map<handler_t, primitive_t>;
+    using primitives_t = std::vector<primitive_t>;
+
 
     /**
      * Добавляет примитив.
      * @param primitive Указатель на примитив.
      * @return Хендлер созданного примитива, либо ноль если создать невозможно.
      */
-    handler_t add_primitive(IPrimitive *primitive) {
+    handler_t add_primitive(primitive_t primitive) {
         if (map_.size() >= max_primitives_) { return 0; }
         if (++handler_ == 0) { ++handler_; }
         map_[handler_] = primitive;
@@ -41,7 +41,7 @@ struct DocumentModel {
      * @param exporter Указатель на экспортер.
      * @return true - экспорт прошел удачно, false - экспорт не возможен.
      */
-    bool export_file(AExporter *exporter) {
+    bool export_document(std::shared_ptr<AExporter> exporter) {
         auto data = get_primitives();
         return exporter->do_convert(data);
     }
@@ -51,7 +51,7 @@ struct DocumentModel {
      * @param importer Указатель на импортер.
      * @return true - ипорт прошел удачно, false - импорт не возможен.
      */
-    bool import_file(AImporter *importer) {
+    bool import_document(std::shared_ptr<AImporter> importer) {
         AImporter::result_t primitives{};
         if (importer->do_convert(primitives)) {
             clear();
@@ -76,14 +76,14 @@ struct DocumentModel {
     }
 
     /**
-     * Выдает ссылку на созданный примитив.
+     * Выдает указатель на созданный примитив.
      * @param handler Хендлер созданного примитива.
-     * @param primitive Ссылка на созданный примитив.
+     * @param primitive Указатель на созданный примитив.
      * @return true - примитив найден, false - примитив не найден.
      */
-    bool get_primitive(handler_t handler, IPrimitive &primitive) {
+    bool get_primitive(handler_t handler, primitive_t *primitive) {
         auto it = map_.find(handler);
-        primitive = *it->second;
+        *primitive = it->second;
         return it != map_.end();
     }
 

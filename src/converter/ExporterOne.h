@@ -2,9 +2,7 @@
 
 #include "converter.h"
 
-/**
- * Экспортер в формат "один".
- */
+/// Экспортер в формат "один".
 struct ExporterOne : public AExporter {
 
     /**

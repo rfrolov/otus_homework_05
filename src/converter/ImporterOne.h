@@ -2,6 +2,7 @@
 
 #include "converter.h"
 
+/// Импортер формата "один".
 struct ImporterOne : public AImporter {
 
    /**

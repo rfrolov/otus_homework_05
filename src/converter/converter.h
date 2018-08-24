@@ -1,13 +1,12 @@
 #pragma once
 
 #include <fstream>
+#include <memory>
 #include "../primitives/IPrimitive.h"
 
-/**
- * Абстракный класс для импортеров данных.
- */
+/// Абстракный класс для импортеров данных.
 struct AImporter {
-    using primitive_t = IPrimitive *;
+    using primitive_t = std::shared_ptr<IPrimitive>;
     using result_t = std::vector<primitive_t>;
 
     /**
@@ -29,11 +28,9 @@ protected:
 };
 
 
-/**
- * Абстракный класс для экспортеров данных.
- */
+/// Абстракный класс для экспортеров данных.
 struct AExporter {
-    using primitive_t = IPrimitive *;
+    using primitive_t = std::shared_ptr<IPrimitive>;
     using data_t = std::vector<primitive_t>;
 
     /**

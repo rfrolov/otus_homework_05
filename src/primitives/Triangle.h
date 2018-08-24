@@ -3,9 +3,7 @@
 #include "IPrimitive.h"
 #include <array>
 
-/**
- * Треугольник.
- */
+/// Треугольник.
 struct Triangle : public IPrimitive {
     using coordinates_t = std::array<Coordinates, 3>;
 
