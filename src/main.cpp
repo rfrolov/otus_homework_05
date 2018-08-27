@@ -34,6 +34,7 @@ int main() {
     }
     document_control.redraw();
 
+
     std::cout << std::endl << "Delete line:" << std::endl;
     document_control.delete_primitive(line_h);
 
@@ -52,6 +53,7 @@ int main() {
 
     std::cout << std::endl << "Import:" << std::endl;
     document_control.import_document(std::make_shared<ImporterOne>("test.txt"));
+
 
     std::cout << std::endl << "Add triangle:" << std::endl;
     document_control.add_primitive(std::make_shared<Line>(Line::coordinates_t{Coordinates(7, 8), Coordinates(9, 10)}));
