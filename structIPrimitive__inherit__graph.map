@@ -1,0 +1,5 @@
+<map id="IPrimitive" name="IPrimitive">
+<area shape="rect" id="node2" href="$structDot.html" title="Точка. " alt="" coords="5,80,48,107"/>
+<area shape="rect" id="node3" href="$structLine.html" title="Линия. " alt="" coords="73,80,119,107"/>
+<area shape="rect" id="node4" href="$structTriangle.html" title="Треугольник. " alt="" coords="143,80,211,107"/>
+</map>

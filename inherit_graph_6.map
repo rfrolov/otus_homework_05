@@ -1,0 +1,6 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$structIPrimitive.html" title="Интерфейс примитива. " alt="" coords="5,56,83,83"/>
+<area shape="rect" id="node2" href="$structDot.html" title="Точка. " alt="" coords="144,5,187,32"/>
+<area shape="rect" id="node3" href="$structLine.html" title="Линия. " alt="" coords="142,56,189,83"/>
+<area shape="rect" id="node4" href="$structTriangle.html" title="Треугольник. " alt="" coords="131,107,199,133"/>
+</map>

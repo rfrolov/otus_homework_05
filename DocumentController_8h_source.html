@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>otus_homework_05: Исходный файл src/document/DocumentController.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">otus_homework_05
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_08b03aabef5f7e8c5c26c812ba7beddf.html">document</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DocumentController.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="DocumentController_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="DocumentModel_8h.html">DocumentModel.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="DocumentView_8h.html">DocumentView.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structDocumentController.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structDocumentController.html">DocumentController</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">    9</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> = <a class="code" href="structDocumentModel.html#a9f6ddb493b9dfdd2e0614a0f2c18ed63">DocumentModel::handler_t</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">   10</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">primitive_t</a> = std::shared_ptr&lt;IPrimitive&gt;;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structDocumentController.html#a21d1ea97983518e1a5fd285e98c113cc">   17</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structDocumentController.html#a21d1ea97983518e1a5fd285e98c113cc">DocumentController</a>(std::shared_ptr&lt;DocumentModel&gt; model, std::shared_ptr&lt;DocumentView&gt; view) : model_{model}, view_{view} {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        assert(model_ != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        assert(view_ != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        view_-&gt;redraw();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structDocumentController.html#a7648cf1c54059309e88e6ba2ac072035">   28</a></span>&#160;    <a class="code" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> <a class="code" href="structDocumentController.html#a7648cf1c54059309e88e6ba2ac072035">add_primitive</a>(<a class="code" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">primitive_t</a> primitive) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">auto</span> <span class="keywordtype">id</span> = model_-&gt;add_primitive(primitive);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        view_-&gt;redraw();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> id;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structDocumentController.html#a2471b07c38cae6eb3d016ab7572243dd">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structDocumentController.html#a2471b07c38cae6eb3d016ab7572243dd">delete_primitive</a>(<a class="code" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> handler) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        model_-&gt;delete_primitive(handler);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        view_-&gt;redraw();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structDocumentController.html#ace65420d46b23c11144698d3a740766d">   49</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structDocumentController.html#ace65420d46b23c11144698d3a740766d">get_primitive</a>(<a class="code" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> handler, <a class="code" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">primitive_t</a> *primitive) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> model_-&gt;get_primitive(handler, primitive);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structDocumentController.html#a263125528963954b1b89ce17adca5481">   58</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structDocumentController.html#a263125528963954b1b89ce17adca5481">import_document</a>(std::shared_ptr&lt;AImporter&gt; importer) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span>(model_-&gt;import_document(importer)) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            view_-&gt;redraw();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structDocumentController.html#a0e73f5095d014f6e81cda54727842602">   71</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structDocumentController.html#a0e73f5095d014f6e81cda54727842602">export_document</a>(std::shared_ptr&lt;AExporter&gt; exporter) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> model_-&gt;export_document(exporter);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structDocumentController.html#aab8c30d939b6956d6f44cca214c76cbd">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structDocumentController.html#aab8c30d939b6956d6f44cca214c76cbd">clear</a>() {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        model_-&gt;clear();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        view_-&gt;redraw();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structDocumentController.html#a1477ee2a9ee19848435a6f00d0677203">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structDocumentController.html#a1477ee2a9ee19848435a6f00d0677203">redraw</a>() {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        view_-&gt;redraw();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::shared_ptr&lt;DocumentModel&gt; model_{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::shared_ptr&lt;DocumentView&gt;  view_{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="ttc" id="structDocumentController_html_a0e73f5095d014f6e81cda54727842602"><div class="ttname"><a href="structDocumentController.html#a0e73f5095d014f6e81cda54727842602">DocumentController::export_document</a></div><div class="ttdeci">bool export_document(std::shared_ptr&lt; AExporter &gt; exporter)</div><div class="ttdef"><b>Definition:</b> DocumentController.h:71</div></div>
+<div class="ttc" id="structDocumentController_html_a21d1ea97983518e1a5fd285e98c113cc"><div class="ttname"><a href="structDocumentController.html#a21d1ea97983518e1a5fd285e98c113cc">DocumentController::DocumentController</a></div><div class="ttdeci">DocumentController(std::shared_ptr&lt; DocumentModel &gt; model, std::shared_ptr&lt; DocumentView &gt; view)</div><div class="ttdef"><b>Definition:</b> DocumentController.h:17</div></div>
+<div class="ttc" id="structDocumentController_html_ace65420d46b23c11144698d3a740766d"><div class="ttname"><a href="structDocumentController.html#ace65420d46b23c11144698d3a740766d">DocumentController::get_primitive</a></div><div class="ttdeci">bool get_primitive(handler_t handler, primitive_t *primitive)</div><div class="ttdef"><b>Definition:</b> DocumentController.h:49</div></div>
+<div class="ttc" id="DocumentModel_8h_html"><div class="ttname"><a href="DocumentModel_8h.html">DocumentModel.h</a></div></div>
+<div class="ttc" id="structDocumentController_html_a7648cf1c54059309e88e6ba2ac072035"><div class="ttname"><a href="structDocumentController.html#a7648cf1c54059309e88e6ba2ac072035">DocumentController::add_primitive</a></div><div class="ttdeci">handler_t add_primitive(primitive_t primitive)</div><div class="ttdef"><b>Definition:</b> DocumentController.h:28</div></div>
+<div class="ttc" id="structDocumentController_html_aab8c30d939b6956d6f44cca214c76cbd"><div class="ttname"><a href="structDocumentController.html#aab8c30d939b6956d6f44cca214c76cbd">DocumentController::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> DocumentController.h:78</div></div>
+<div class="ttc" id="structDocumentModel_html_a9f6ddb493b9dfdd2e0614a0f2c18ed63"><div class="ttname"><a href="structDocumentModel.html#a9f6ddb493b9dfdd2e0614a0f2c18ed63">DocumentModel::handler_t</a></div><div class="ttdeci">uint64_t handler_t</div><div class="ttdef"><b>Definition:</b> DocumentModel.h:12</div></div>
+<div class="ttc" id="structDocumentController_html_a7d9cf2376d6efc8c16c19a3a10e4999d"><div class="ttname"><a href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">DocumentController::primitive_t</a></div><div class="ttdeci">std::shared_ptr&lt; IPrimitive &gt; primitive_t</div><div class="ttdef"><b>Definition:</b> DocumentController.h:10</div></div>
+<div class="ttc" id="structDocumentController_html"><div class="ttname"><a href="structDocumentController.html">DocumentController</a></div><div class="ttdoc">Контроллер документа. </div><div class="ttdef"><b>Definition:</b> DocumentController.h:8</div></div>
+<div class="ttc" id="structDocumentController_html_a1477ee2a9ee19848435a6f00d0677203"><div class="ttname"><a href="structDocumentController.html#a1477ee2a9ee19848435a6f00d0677203">DocumentController::redraw</a></div><div class="ttdeci">void redraw()</div><div class="ttdoc">Перерисовывает документ. </div><div class="ttdef"><b>Definition:</b> DocumentController.h:84</div></div>
+<div class="ttc" id="structDocumentController_html_a263125528963954b1b89ce17adca5481"><div class="ttname"><a href="structDocumentController.html#a263125528963954b1b89ce17adca5481">DocumentController::import_document</a></div><div class="ttdeci">bool import_document(std::shared_ptr&lt; AImporter &gt; importer)</div><div class="ttdef"><b>Definition:</b> DocumentController.h:58</div></div>
+<div class="ttc" id="DocumentView_8h_html"><div class="ttname"><a href="DocumentView_8h.html">DocumentView.h</a></div></div>
+<div class="ttc" id="structDocumentController_html_a2471b07c38cae6eb3d016ab7572243dd"><div class="ttname"><a href="structDocumentController.html#a2471b07c38cae6eb3d016ab7572243dd">DocumentController::delete_primitive</a></div><div class="ttdeci">void delete_primitive(handler_t handler)</div><div class="ttdef"><b>Definition:</b> DocumentController.h:38</div></div>
+<div class="ttc" id="structDocumentController_html_aae7ddbfcbdee0ac95ec4f148a08362fe"><div class="ttname"><a href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">DocumentController::handler_t</a></div><div class="ttdeci">DocumentModel::handler_t handler_t</div><div class="ttdef"><b>Definition:</b> DocumentController.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

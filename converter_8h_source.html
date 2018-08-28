@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>otus_homework_05: Исходный файл src/converter/converter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">otus_homework_05
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5c5de09ace99d6a497133aab4fd5d2d2.html">converter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">converter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="converter_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../primitives/IPrimitive.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structAImporter.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structAImporter.html">AImporter</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structAImporter.html#ad5115d97581d013146ec799f160864be">    9</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structAImporter.html#ad5115d97581d013146ec799f160864be">primitive_t</a> = std::shared_ptr&lt;IPrimitive&gt;;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structAImporter.html#a121bc4ab26ea0107846cf8a0aa64f5b0">   10</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structAImporter.html#a121bc4ab26ea0107846cf8a0aa64f5b0">result_t</a> = std::vector&lt;primitive_t&gt;;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structAImporter.html#a1ef997f9cdf8bc5e57270b13c31ac974">   16</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structAImporter.html#a1ef997f9cdf8bc5e57270b13c31ac974">AImporter</a>(<span class="keyword">const</span> std::string &amp;file_name) { <a class="code" href="structAImporter.html#a3ebd8d4af759225e5e81a19246e5bad2">fs_</a>.open(file_name, std::ios::in); }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structAImporter.html#a26927635866eab735ee94c9ff0c1ae07">   18</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structAImporter.html#a26927635866eab735ee94c9ff0c1ae07">~AImporter</a>() { <a class="code" href="structAImporter.html#a3ebd8d4af759225e5e81a19246e5bad2">fs_</a>.close(); }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="structAImporter.html#a206b45d7f0e2f1aa077153a85dc41efc">do_convert</a>(<a class="code" href="structAImporter.html#a121bc4ab26ea0107846cf8a0aa64f5b0">result_t</a> &amp;) = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structAImporter.html#a3ebd8d4af759225e5e81a19246e5bad2">   27</a></span>&#160;    std::fstream <a class="code" href="structAImporter.html#a3ebd8d4af759225e5e81a19246e5bad2">fs_</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structAExporter.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structAExporter.html">AExporter</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structAExporter.html#a722e3adc25049d25d7a1acda163e8e22">   33</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structAExporter.html#a722e3adc25049d25d7a1acda163e8e22">primitive_t</a> = std::shared_ptr&lt;IPrimitive&gt;;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structAExporter.html#a4e178aa30d6f538274dfd3a7ba501213">   34</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structAExporter.html#a4e178aa30d6f538274dfd3a7ba501213">data_t</a> = std::vector&lt;primitive_t&gt;;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structAExporter.html#a8b9d2f868299966cad918eabafea8da0">   40</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structAExporter.html#a8b9d2f868299966cad918eabafea8da0">AExporter</a>(<span class="keyword">const</span> std::string &amp;file_name) { <a class="code" href="structAExporter.html#ae9c1dfa025b4e2b76349b7347379ac89">fs_</a>.open(file_name, std::ios::out); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structAExporter.html#a22278718b900ea9a7ea1477ed4f8d28c">   42</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structAExporter.html#a22278718b900ea9a7ea1477ed4f8d28c">~AExporter</a>() { <a class="code" href="structAExporter.html#ae9c1dfa025b4e2b76349b7347379ac89">fs_</a>.close(); }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="structAExporter.html#a739394b796afa894aabafcced039b0f7">do_convert</a>(<a class="code" href="structAExporter.html#a4e178aa30d6f538274dfd3a7ba501213">data_t</a> &amp;) = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structAExporter.html#ae9c1dfa025b4e2b76349b7347379ac89">   51</a></span>&#160;    std::fstream <a class="code" href="structAExporter.html#ae9c1dfa025b4e2b76349b7347379ac89">fs_</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="ttc" id="structAImporter_html_a26927635866eab735ee94c9ff0c1ae07"><div class="ttname"><a href="structAImporter.html#a26927635866eab735ee94c9ff0c1ae07">AImporter::~AImporter</a></div><div class="ttdeci">virtual ~AImporter()</div><div class="ttdef"><b>Definition:</b> converter.h:18</div></div>
+<div class="ttc" id="structAExporter_html_a4e178aa30d6f538274dfd3a7ba501213"><div class="ttname"><a href="structAExporter.html#a4e178aa30d6f538274dfd3a7ba501213">AExporter::data_t</a></div><div class="ttdeci">std::vector&lt; primitive_t &gt; data_t</div><div class="ttdef"><b>Definition:</b> converter.h:34</div></div>
+<div class="ttc" id="structAImporter_html_a1ef997f9cdf8bc5e57270b13c31ac974"><div class="ttname"><a href="structAImporter.html#a1ef997f9cdf8bc5e57270b13c31ac974">AImporter::AImporter</a></div><div class="ttdeci">AImporter(const std::string &amp;file_name)</div><div class="ttdef"><b>Definition:</b> converter.h:16</div></div>
+<div class="ttc" id="structAImporter_html"><div class="ttname"><a href="structAImporter.html">AImporter</a></div><div class="ttdoc">Абстракный класс для импортеров данных. </div><div class="ttdef"><b>Definition:</b> converter.h:8</div></div>
+<div class="ttc" id="structAExporter_html"><div class="ttname"><a href="structAExporter.html">AExporter</a></div><div class="ttdoc">Абстракный класс для экспортеров данных. </div><div class="ttdef"><b>Definition:</b> converter.h:32</div></div>
+<div class="ttc" id="structAExporter_html_a722e3adc25049d25d7a1acda163e8e22"><div class="ttname"><a href="structAExporter.html#a722e3adc25049d25d7a1acda163e8e22">AExporter::primitive_t</a></div><div class="ttdeci">std::shared_ptr&lt; IPrimitive &gt; primitive_t</div><div class="ttdef"><b>Definition:</b> converter.h:33</div></div>
+<div class="ttc" id="structAImporter_html_ad5115d97581d013146ec799f160864be"><div class="ttname"><a href="structAImporter.html#ad5115d97581d013146ec799f160864be">AImporter::primitive_t</a></div><div class="ttdeci">std::shared_ptr&lt; IPrimitive &gt; primitive_t</div><div class="ttdef"><b>Definition:</b> converter.h:9</div></div>
+<div class="ttc" id="structAExporter_html_a739394b796afa894aabafcced039b0f7"><div class="ttname"><a href="structAExporter.html#a739394b796afa894aabafcced039b0f7">AExporter::do_convert</a></div><div class="ttdeci">virtual bool do_convert(data_t &amp;)=0</div></div>
+<div class="ttc" id="structAImporter_html_a206b45d7f0e2f1aa077153a85dc41efc"><div class="ttname"><a href="structAImporter.html#a206b45d7f0e2f1aa077153a85dc41efc">AImporter::do_convert</a></div><div class="ttdeci">virtual bool do_convert(result_t &amp;)=0</div></div>
+<div class="ttc" id="structAExporter_html_ae9c1dfa025b4e2b76349b7347379ac89"><div class="ttname"><a href="structAExporter.html#ae9c1dfa025b4e2b76349b7347379ac89">AExporter::fs_</a></div><div class="ttdeci">std::fstream fs_</div><div class="ttdef"><b>Definition:</b> converter.h:51</div></div>
+<div class="ttc" id="structAExporter_html_a8b9d2f868299966cad918eabafea8da0"><div class="ttname"><a href="structAExporter.html#a8b9d2f868299966cad918eabafea8da0">AExporter::AExporter</a></div><div class="ttdeci">AExporter(const std::string &amp;file_name)</div><div class="ttdef"><b>Definition:</b> converter.h:40</div></div>
+<div class="ttc" id="structAExporter_html_a22278718b900ea9a7ea1477ed4f8d28c"><div class="ttname"><a href="structAExporter.html#a22278718b900ea9a7ea1477ed4f8d28c">AExporter::~AExporter</a></div><div class="ttdeci">virtual ~AExporter()</div><div class="ttdef"><b>Definition:</b> converter.h:42</div></div>
+<div class="ttc" id="structAImporter_html_a121bc4ab26ea0107846cf8a0aa64f5b0"><div class="ttname"><a href="structAImporter.html#a121bc4ab26ea0107846cf8a0aa64f5b0">AImporter::result_t</a></div><div class="ttdeci">std::vector&lt; primitive_t &gt; result_t</div><div class="ttdef"><b>Definition:</b> converter.h:10</div></div>
+<div class="ttc" id="structAImporter_html_a3ebd8d4af759225e5e81a19246e5bad2"><div class="ttname"><a href="structAImporter.html#a3ebd8d4af759225e5e81a19246e5bad2">AImporter::fs_</a></div><div class="ttdeci">std::fstream fs_</div><div class="ttdef"><b>Definition:</b> converter.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
