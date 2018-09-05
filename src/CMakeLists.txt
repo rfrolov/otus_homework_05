@@ -12,8 +12,6 @@ set_target_properties(
         CXX_STANDARD_REQUIRED ON
 )
 
-target_link_libraries(${PROJECT_NAME} version)
-
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)

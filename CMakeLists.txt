@@ -5,5 +5,3 @@ if (NOT DEFINED ENV{TRAVIS_BUILD_NUMBER})
 endif ()
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
-
-enable_testing()
