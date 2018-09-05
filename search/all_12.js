@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7eaexporter',['~AExporter',['../structAExporter.html#a22278718b900ea9a7ea1477ed4f8d28c',1,'AExporter']]],
-  ['_7eaimporter',['~AImporter',['../structAImporter.html#a26927635866eab735ee94c9ff0c1ae07',1,'AImporter']]]
+  ['y',['y',['../structCoordinates.html#aae83211da8e94ae2edd3b407c19bff07',1,'Coordinates']]]
 ];

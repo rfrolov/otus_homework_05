@@ -1,8 +1,6 @@
 <map id="src/converter/ImporterOne.cpp" name="src/converter/ImporterOne.cpp">
-<area shape="rect" id="node2" href="$Dot_8h.html" title="../primitives/Dot.h" alt="" coords="5,155,131,181"/>
-<area shape="rect" id="node5" href="$Line_8h.html" title="../primitives/Line.h" alt="" coords="106,80,235,107"/>
-<area shape="rect" id="node7" href="$Triangle_8h.html" title="../primitives/Triangle.h" alt="" coords="259,80,409,107"/>
-<area shape="rect" id="node9" href="$ImporterOne_8h.html" title="ImporterOne.h" alt="" coords="555,80,660,107"/>
-<area shape="rect" id="node3" href="$IPrimitive_8h.html" title="IPrimitive.h" alt="" coords="208,229,296,256"/>
-<area shape="rect" id="node10" href="$converter_8h.html" title="converter.h" alt="" coords="482,155,568,181"/>
+<area shape="rect" id="node2" href="$IPrimitive_8h.html" title="../primitives/IPrimitive.h" alt="" coords="5,229,164,256"/>
+<area shape="rect" id="node4" href="$utils_8h.html" title="../utils/utils.h" alt="" coords="91,80,188,107"/>
+<area shape="rect" id="node6" href="$ImporterOne_8h.html" title="ImporterOne.h" alt="" coords="213,80,317,107"/>
+<area shape="rect" id="node7" href="$converter_8h.html" title="converter.h" alt="" coords="211,155,297,181"/>
 </map>

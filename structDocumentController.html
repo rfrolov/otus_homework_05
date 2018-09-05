@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,19 +104,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a21d1ea97983518e1a5fd285e98c113cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a21d1ea97983518e1a5fd285e98c113cc">DocumentController</a> (std::shared_ptr&lt; <a class="el" href="structDocumentModel.html">DocumentModel</a> &gt; model, std::shared_ptr&lt; <a class="el" href="structDocumentView.html">DocumentView</a> &gt; view)</td></tr>
-<tr class="separator:a21d1ea97983518e1a5fd285e98c113cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7648cf1c54059309e88e6ba2ac072035"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a7648cf1c54059309e88e6ba2ac072035">add_primitive</a> (<a class="el" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">primitive_t</a> primitive)</td></tr>
-<tr class="separator:a7648cf1c54059309e88e6ba2ac072035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb6604c60129b351b98a9c35fa181b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#abdb6604c60129b351b98a9c35fa181b9">DocumentController</a> (std::shared_ptr&lt; <a class="el" href="structDocumentModel.html">DocumentModel</a> &gt; model)</td></tr>
+<tr class="separator:abdb6604c60129b351b98a9c35fa181b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f9d030e57d8e6b11e86a738a560f57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a35f9d030e57d8e6b11e86a738a560f57">add_dot</a> (const <a class="el" href="structCoordinates.html">Coordinates</a> &amp;coordinates)</td></tr>
+<tr class="separator:a35f9d030e57d8e6b11e86a738a560f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab1d6823ee8fb8d27766c0183445e8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a4ab1d6823ee8fb8d27766c0183445e8e">add_line</a> (const <a class="el" href="structCoordinates.html">Coordinates</a> coordinates[2])</td></tr>
+<tr class="separator:a4ab1d6823ee8fb8d27766c0183445e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228ef30d3f63acf46a12442a97769d89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a228ef30d3f63acf46a12442a97769d89">add_triangle</a> (const <a class="el" href="structCoordinates.html">Coordinates</a> coordinates[3])</td></tr>
+<tr class="separator:a228ef30d3f63acf46a12442a97769d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd9987663acd4ab7ffb4c9dc9f09d68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#afbd9987663acd4ab7ffb4c9dc9f09d68">modify_line</a> (<a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> handler, const <a class="el" href="structCoordinates.html">Coordinates</a> coordinates[2])</td></tr>
+<tr class="separator:afbd9987663acd4ab7ffb4c9dc9f09d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ce304f757ffaaf8d5edaf10634caae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a90ce304f757ffaaf8d5edaf10634caae">export_format_one</a> (std::string file_name)</td></tr>
+<tr class="separator:a90ce304f757ffaaf8d5edaf10634caae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddf0ae299dbc1f39ad57f4eb3603391"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a6ddf0ae299dbc1f39ad57f4eb3603391">export_format_two</a> (std::string file_name)</td></tr>
+<tr class="separator:a6ddf0ae299dbc1f39ad57f4eb3603391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab4a01d585be2cc3a1de34e80fc5a31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#aaab4a01d585be2cc3a1de34e80fc5a31">import_format_one</a> (std::string file_name)</td></tr>
+<tr class="separator:aaab4a01d585be2cc3a1de34e80fc5a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ff1482401a7f1777ae26516e498862"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a71ff1482401a7f1777ae26516e498862">import_format_two</a> (std::string file_name)</td></tr>
+<tr class="separator:a71ff1482401a7f1777ae26516e498862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2471b07c38cae6eb3d016ab7572243dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a2471b07c38cae6eb3d016ab7572243dd">delete_primitive</a> (<a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> handler)</td></tr>
 <tr class="separator:a2471b07c38cae6eb3d016ab7572243dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace65420d46b23c11144698d3a740766d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#ace65420d46b23c11144698d3a740766d">get_primitive</a> (<a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> handler, <a class="el" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">primitive_t</a> *primitive)</td></tr>
-<tr class="separator:ace65420d46b23c11144698d3a740766d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a263125528963954b1b89ce17adca5481"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a263125528963954b1b89ce17adca5481">import_document</a> (std::shared_ptr&lt; <a class="el" href="structAImporter.html">AImporter</a> &gt; importer)</td></tr>
-<tr class="separator:a263125528963954b1b89ce17adca5481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e73f5095d014f6e81cda54727842602"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a0e73f5095d014f6e81cda54727842602">export_document</a> (std::shared_ptr&lt; <a class="el" href="structAExporter.html">AExporter</a> &gt; exporter)</td></tr>
-<tr class="separator:a0e73f5095d014f6e81cda54727842602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8c30d939b6956d6f44cca214c76cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#aab8c30d939b6956d6f44cca214c76cbd">clear</a> ()</td></tr>
+<tr class="memdesc:aab8c30d939b6956d6f44cca214c76cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистить документ.  <a href="#aab8c30d939b6956d6f44cca214c76cbd">Подробнее...</a><br/></td></tr>
 <tr class="separator:aab8c30d939b6956d6f44cca214c76cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1477ee2a9ee19848435a6f00d0677203"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentController.html#a1477ee2a9ee19848435a6f00d0677203">redraw</a> ()</td></tr>
 <tr class="memdesc:a1477ee2a9ee19848435a6f00d0677203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перерисовывает документ.  <a href="#a1477ee2a9ee19848435a6f00d0677203">Подробнее...</a><br/></td></tr>
@@ -150,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div>
 </div>
 <h2 class="groupheader">Конструктор(ы)</h2>
-<a class="anchor" id="a21d1ea97983518e1a5fd285e98c113cc"></a>
+<a class="anchor" id="abdb6604c60129b351b98a9c35fa181b9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -161,18 +170,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
           <td class="memname">DocumentController::DocumentController </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structDocumentModel.html">DocumentModel</a> &gt;&#160;</td>
-          <td class="paramname"><em>model</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>model</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structDocumentView.html">DocumentView</a> &gt;&#160;</td>
-          <td class="paramname"><em>view</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -185,7 +184,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">model</td><td>Указатель на модель. </td></tr>
-    <tr><td class="paramname">view</td><td>Указатель на представление. </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
-<a class="anchor" id="a7648cf1c54059309e88e6ba2ac072035"></a>
+<a class="anchor" id="a35f9d030e57d8e6b11e86a738a560f57"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -201,10 +199,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> DocumentController::add_primitive </td>
+          <td class="memname"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> DocumentController::add_dot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">primitive_t</a>&#160;</td>
-          <td class="paramname"><em>primitive</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structCoordinates.html">Coordinates</a> &amp;&#160;</td>
+          <td class="paramname"><em>coordinates</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -214,14 +212,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Добавляет примитив. </p>
+<p>Добавляет точку. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">primitive</td><td>Указатель на создаваемый примиттив. </td></tr>
+    <tr><td class="paramname">coordinates</td><td>Координаты точки. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>Хендлер созданного примитива, либо ноль если создать невозможно. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Идентификатор. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4ab1d6823ee8fb8d27766c0183445e8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> DocumentController::add_line </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structCoordinates.html">Coordinates</a>&#160;</td>
+          <td class="paramname"><em>coordinates</em>[2]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Добавляет линию. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinates</td><td>Координаты концов линии. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Идентификатор. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a228ef30d3f63acf46a12442a97769d89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a> DocumentController::add_triangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structCoordinates.html">Coordinates</a>&#160;</td>
+          <td class="paramname"><em>coordinates</em>[3]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Добавляет треугольник. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinates</td><td>координаты вершин треугольника. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Идентификатор. </dd></dl>
 
 </div>
 </div>
@@ -245,6 +307,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Очистить документ. </p>
 
 </div>
@@ -273,14 +336,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <p>Удаляет примитив. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handler</td><td>Хендлер удаляемого примитива </td></tr>
+    <tr><td class="paramname">handler</td><td>Идентификатор удаляемого примитива. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a0e73f5095d014f6e81cda54727842602"></a>
+<a class="anchor" id="a90ce304f757ffaaf8d5edaf10634caae"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -288,10 +351,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool DocumentController::export_document </td>
+          <td class="memname">bool DocumentController::export_format_one </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structAExporter.html">AExporter</a> &gt;&#160;</td>
-          <td class="paramname"><em>exporter</em></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -301,18 +364,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Экспортировать документ. </p>
+<p>Экспортирует документ в файл формата "One". </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">exporter</td><td>Указатель на экспортер. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Имя файла. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>true - экспорт прошел удачно, false - экспорт не возможен. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - выполнено успешно, false - ошибка. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ace65420d46b23c11144698d3a740766d"></a>
+<a class="anchor" id="a6ddf0ae299dbc1f39ad57f4eb3603391"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -320,7 +383,103 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool DocumentController::get_primitive </td>
+          <td class="memname">bool DocumentController::export_format_two </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Экспортирует документ в файл формата "Two". </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>Имя файла. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - выполнено успешно, false - ошибка. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaab4a01d585be2cc3a1de34e80fc5a31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DocumentController::import_format_one </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Импортирует документ из файла формата "One". </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>Имя файла. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - выполнено успешно, false - ошибка. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a71ff1482401a7f1777ae26516e498862"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DocumentController::import_format_two </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Импортирует документ из файла формата "Two". </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>Имя файла. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - выполнено успешно, false - ошибка. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afbd9987663acd4ab7ffb4c9dc9f09d68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DocumentController::modify_line </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structDocumentController.html#aae7ddbfcbdee0ac95ec4f148a08362fe">handler_t</a>&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
@@ -328,8 +487,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structDocumentController.html#a7d9cf2376d6efc8c16c19a3a10e4999d">primitive_t</a> *&#160;</td>
-          <td class="paramname"><em>primitive</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCoordinates.html">Coordinates</a>&#160;</td>
+          <td class="paramname"><em>coordinates</em>[2]&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -343,47 +502,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Выдает указатель на созданный примитив. </p>
+<p>Изменяет линию. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handler</td><td>Хендлер созданного примитива. </td></tr>
-    <tr><td class="paramname">primitive</td><td>Указатель на созданный примитив. </td></tr>
+    <tr><td class="paramname">handler</td><td>Идентификатор примитива. </td></tr>
+    <tr><td class="paramname">coordinates</td><td>Новые координаты вершин треугольника. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>true - примитив найден, false - примитив не найден. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a263125528963954b1b89ce17adca5481"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool DocumentController::import_document </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structAImporter.html">AImporter</a> &gt;&#160;</td>
-          <td class="paramname"><em>importer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Импортировать документ. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">importer</td><td>Указатель на импортер. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd>true - ипорт прошел удачно, false - импорт не возможен. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - Изменение прошло успешно, false - примитив не найден. </dd></dl>
 
 </div>
 </div>

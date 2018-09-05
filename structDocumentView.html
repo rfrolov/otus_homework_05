@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,41 +96,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a68c19ed4b8dd1568c4bb2ddd7690c929"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentView.html#a68c19ed4b8dd1568c4bb2ddd7690c929">DocumentView</a> (std::shared_ptr&lt; <a class="el" href="structDocumentModel.html">DocumentModel</a> &gt; model)</td></tr>
-<tr class="separator:a68c19ed4b8dd1568c4bb2ddd7690c929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac27e3344d54cc0d2dee50c723f948de4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentView.html#ac27e3344d54cc0d2dee50c723f948de4">redraw</a> ()</td></tr>
-<tr class="memdesc:ac27e3344d54cc0d2dee50c723f948de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перерисовывает документ.  <a href="#ac27e3344d54cc0d2dee50c723f948de4">Подробнее...</a><br/></td></tr>
-<tr class="separator:ac27e3344d54cc0d2dee50c723f948de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade3780deb9952c71915dc8a3241fff22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDocumentView.html#ade3780deb9952c71915dc8a3241fff22">redraw</a> (<a class="el" href="structIPrimitive.html#a1ef3402bd0e4a89197fe9ca198692900">IPrimitive::serialised_t</a> data)</td></tr>
+<tr class="memdesc:ade3780deb9952c71915dc8a3241fff22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовывает примитив.  <a href="#ade3780deb9952c71915dc8a3241fff22">Подробнее...</a><br/></td></tr>
+<tr class="separator:ade3780deb9952c71915dc8a3241fff22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Представление документа. </p>
-</div><h2 class="groupheader">Конструктор(ы)</h2>
-<a class="anchor" id="a68c19ed4b8dd1568c4bb2ddd7690c929"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DocumentView::DocumentView </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structDocumentModel.html">DocumentModel</a> &gt;&#160;</td>
-          <td class="paramname"><em>model</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Методы</h2>
-<a class="anchor" id="ac27e3344d54cc0d2dee50c723f948de4"></a>
+</div><h2 class="groupheader">Методы</h2>
+<a class="anchor" id="ade3780deb9952c71915dc8a3241fff22"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -140,7 +113,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
         <tr>
           <td class="memname">void DocumentView::redraw </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structIPrimitive.html#a1ef3402bd0e4a89197fe9ca198692900">IPrimitive::serialised_t</a>&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -151,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </table>
 </div><div class="memdoc">
 
-<p>Перерисовывает документ. </p>
+<p>Отрисовывает примитив. </p>
 
 </div>
 </div>

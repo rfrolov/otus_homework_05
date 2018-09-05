@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,34 +89,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="contents">
 <a href="DocumentView_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="DocumentModel_8h.html">DocumentModel.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils/utils.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structDocumentView.html">    7</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structDocumentView.html">DocumentView</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structDocumentView.html#a68c19ed4b8dd1568c4bb2ddd7690c929">    8</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structDocumentView.html#a68c19ed4b8dd1568c4bb2ddd7690c929">DocumentView</a>(std::shared_ptr&lt;DocumentModel&gt; model) : model_{model} {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structDocumentView.html#ac27e3344d54cc0d2dee50c723f948de4">   12</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structDocumentView.html#ac27e3344d54cc0d2dee50c723f948de4">redraw</a>() {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">auto</span> vect = model_.lock()-&gt;get_primitives();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span>(vect.size() == 0) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Clean&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;it : vect) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <a class="code" href="structIPrimitive.html#a1ef3402bd0e4a89197fe9ca198692900">IPrimitive::serialised_t</a> data = it-&gt;get_data();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                std::cout &lt;&lt; data;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::weak_ptr&lt;DocumentModel&gt; model_{};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structDocumentView.html#ade3780deb9952c71915dc8a3241fff22">   10</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structDocumentView.html#ade3780deb9952c71915dc8a3241fff22">redraw</a>(<a class="code" href="structIPrimitive.html#a1ef3402bd0e4a89197fe9ca198692900">IPrimitive::serialised_t</a> data) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        std::cout &lt;&lt; data;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
 <div class="ttc" id="structIPrimitive_html_a1ef3402bd0e4a89197fe9ca198692900"><div class="ttname"><a href="structIPrimitive.html#a1ef3402bd0e4a89197fe9ca198692900">IPrimitive::serialised_t</a></div><div class="ttdeci">std::vector&lt; int &gt; serialised_t</div><div class="ttdef"><b>Definition:</b> IPrimitive.h:7</div></div>
-<div class="ttc" id="DocumentModel_8h_html"><div class="ttname"><a href="DocumentModel_8h.html">DocumentModel.h</a></div></div>
+<div class="ttc" id="structDocumentView_html_ade3780deb9952c71915dc8a3241fff22"><div class="ttname"><a href="structDocumentView.html#ade3780deb9952c71915dc8a3241fff22">DocumentView::redraw</a></div><div class="ttdeci">void redraw(IPrimitive::serialised_t data)</div><div class="ttdoc">Отрисовывает примитив. </div><div class="ttdef"><b>Definition:</b> DocumentView.h:10</div></div>
 <div class="ttc" id="structDocumentView_html"><div class="ttname"><a href="structDocumentView.html">DocumentView</a></div><div class="ttdoc">Представление документа. </div><div class="ttdef"><b>Definition:</b> DocumentView.h:7</div></div>
-<div class="ttc" id="structDocumentView_html_a68c19ed4b8dd1568c4bb2ddd7690c929"><div class="ttname"><a href="structDocumentView.html#a68c19ed4b8dd1568c4bb2ddd7690c929">DocumentView::DocumentView</a></div><div class="ttdeci">DocumentView(std::shared_ptr&lt; DocumentModel &gt; model)</div><div class="ttdef"><b>Definition:</b> DocumentView.h:8</div></div>
-<div class="ttc" id="structDocumentView_html_ac27e3344d54cc0d2dee50c723f948de4"><div class="ttname"><a href="structDocumentView.html#ac27e3344d54cc0d2dee50c723f948de4">DocumentView::redraw</a></div><div class="ttdeci">void redraw()</div><div class="ttdoc">Перерисовывает документ. </div><div class="ttdef"><b>Definition:</b> DocumentView.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

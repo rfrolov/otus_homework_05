@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['set_5fdata',['set_data',['../structDot.html#a6301bedd1374caf2dcd2bdd19c9c45bb',1,'Dot::set_data()'],['../structIPrimitive.html#a488853fe1f7464a6b1198f3b32433bf0',1,'IPrimitive::set_data()'],['../structLine.html#a4c52f49c61674577ac2612f5caadf48d',1,'Line::set_data()'],['../structTriangle.html#acd828d1d364f93bed64cb09d771298f5',1,'Triangle::set_data()']]]
+  ['redraw',['redraw',['../structDocumentController.html#a1477ee2a9ee19848435a6f00d0677203',1,'DocumentController::redraw()'],['../structDocumentModel.html#aaffdb241d9fddf881039277f3630c67b',1,'DocumentModel::redraw()'],['../structDocumentView.html#ade3780deb9952c71915dc8a3241fff22',1,'DocumentView::redraw()']]]
 ];

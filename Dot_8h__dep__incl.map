@@ -1,4 +1,5 @@
 <map id="src/primitives/Dot.h" name="src/primitives/Dot.h">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,80,101,107"/>
-<area shape="rect" id="node3" href="$ImporterOne_8cpp.html" title="src/converter/ImporterOne.cpp" alt="" coords="126,80,324,107"/>
+<area shape="rect" id="node2" href="$DocumentModel_8h.html" title="src/document/DocumentModel.h" alt="" coords="16,80,225,107"/>
+<area shape="rect" id="node3" href="$DocumentController_8h.html" title="src/document/DocumentController.h" alt="" coords="5,155,237,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="73,229,169,256"/>
 </map>
