@@ -1,6 +1,4 @@
-#include "../primitives/Dot.h"
-#include "../primitives/Line.h"
-#include "../primitives/Triangle.h"
+#include "../primitives/IPrimitive.h"
 #include "../utils/utils.h"
 #include "ImporterOne.h"
 
@@ -20,30 +18,21 @@ bool ImporterOne::do_convert(result_t &result) {
             case IPrimitive::type::dot : {
                 int x, y;
                 fs_ >> x >> y;
-                auto dot            = std::make_shared<Dot>();
-                auto serialisedData = IPrimitive::serialised_t{type, x, y};
-                dot->set_data(serialisedData);
-                result.emplace_back(dot);
+                result.emplace_back(serialised_t{type, x, y});
                 break;
             }
 
             case IPrimitive::type::line : {
                 int x1, y1, x2, y2;
                 fs_ >> x1 >> y1 >> x2 >> y2;
-                auto line           = std::make_shared<Line>();
-                auto serialisedData = IPrimitive::serialised_t{type, x1, y1, x2, y2};
-                line->set_data(serialisedData);
-                result.emplace_back(line);
+                result.emplace_back(serialised_t{type, x1, y1, x2, y2});
                 break;
             }
 
             case IPrimitive::type::triangle : {
                 int x1, y1, x2, y2, x3, y3;
                 fs_ >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
-                auto triangle       = std::make_shared<Triangle>();
-                auto serialisedData = IPrimitive::serialised_t{type, x1, y1, x2, y2, x3, y3};
-                triangle->set_data(serialisedData);
-                result.emplace_back(triangle);
+                result.emplace_back(serialised_t{type, x1, y1, x2, y2, x3, y3});
                 break;
             }
 

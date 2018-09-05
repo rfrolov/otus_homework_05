@@ -7,8 +7,7 @@ bool ExporterOne::do_convert(data_t &data) {
     if (!fs_.is_open()) { return false; }
 
     fs_ << data.size() << std::endl;
-    for (const auto &it : data) {
-        auto serialised_data = it->get_data();
+    for (auto &serialised_data : data) {
         fs_ << serialised_data;
     }
 

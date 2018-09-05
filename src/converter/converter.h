@@ -6,8 +6,8 @@
 
 /// Абстракный класс для импортеров данных.
 struct AImporter {
-    using primitive_t = std::shared_ptr<IPrimitive>;
-    using result_t = std::vector<primitive_t>;
+    using serialised_t = IPrimitive::serialised_t;
+    using result_t = std::vector<serialised_t>;
 
     /**
      * Конструктор.
@@ -30,8 +30,8 @@ protected:
 
 /// Абстракный класс для экспортеров данных.
 struct AExporter {
-    using primitive_t = std::shared_ptr<IPrimitive>;
-    using data_t = std::vector<primitive_t>;
+    using serialised_t = IPrimitive::serialised_t;
+    using data_t = std::vector<serialised_t>;
 
     /**
      * Конструктор.

@@ -2,7 +2,10 @@
 
 #include <cassert>
 #include "DocumentModel.h"
-#include "DocumentView.h"
+#include "../converter/ExporterOne.h"
+#include "../converter/ExporterTwo.h"
+#include "../converter/ImporterOne.h"
+#include "../converter/ImporterTwo.h"
 
 /// Контроллер документа.
 struct DocumentController {
@@ -12,81 +15,118 @@ struct DocumentController {
     /**
      * Конструктор.
      * @param model Указатель на модель.
-     * @param view Указатель на представление.
      */
-    explicit DocumentController(std::shared_ptr<DocumentModel> model, std::shared_ptr<DocumentView> view) : model_{model}, view_{view} {
+    explicit DocumentController(std::shared_ptr<DocumentModel> model) : model_{model} {
         assert(model_ != nullptr);
-        assert(view_ != nullptr);
-        view_->redraw();
     };
 
     /**
-     * Добавляет примитив.
-     * @param primitive Указатель на создаваемый примиттив.
-     * @return Хендлер созданного примитива, либо ноль если создать невозможно.
+     * Добавляет точку.
+     * @param coordinates Координаты точки.
+     * @return Идентификатор.
      */
-    handler_t add_primitive(primitive_t primitive) {
-        auto id = model_->add_primitive(primitive);
-        view_->redraw();
+    handler_t add_dot(const Coordinates &coordinates) {
+        auto serialised_data = IPrimitive::serialised_t{static_cast<int>(IPrimitive::type::dot), coordinates.x, coordinates.y};
+        auto id              = model_->add_primitive(serialised_data);
         return id;
     }
 
     /**
+     * Добавляет линию.
+     * @param coordinates Координаты концов линии.
+     * @return Идентификатор.
+     */
+    handler_t add_line(const Coordinates coordinates[2]) {
+        auto serialised_data = IPrimitive::serialised_t{static_cast<int>(IPrimitive::type::line),
+                                                        coordinates[0].x, coordinates[0].y,
+                                                        coordinates[1].x, coordinates[1].y};
+        auto id              = model_->add_primitive(serialised_data);
+        return id;
+    }
+
+    /**
+     * Добавляет треугольник.
+     * @param coordinates координаты вершин треугольника.
+     * @return Идентификатор.
+     */
+    handler_t add_triangle(const Coordinates coordinates[3]) {
+        auto serialised_data = IPrimitive::serialised_t{static_cast<int>(IPrimitive::type::triangle),
+                                                        coordinates[0].x, coordinates[0].y,
+                                                        coordinates[1].x, coordinates[1].y,
+                                                        coordinates[2].x, coordinates[2].y};
+
+        auto id = model_->add_primitive(serialised_data);
+        return id;
+    }
+
+    /**
+     * Изменяет линию.
+     * @param handler Идентификатор примитива.
+     * @param coordinates Новые координаты вершин треугольника.
+     * @return true - Изменение прошло успешно, false - примитив не найден.
+     */
+    bool modify_line(handler_t handler, const Coordinates coordinates[2]) {
+        auto serialised_data = IPrimitive::serialised_t{static_cast<int>(IPrimitive::type::line),
+                                                        coordinates[0].x, coordinates[0].y,
+                                                        coordinates[1].x, coordinates[1].y};
+        return model_->modify_primitive(handler, serialised_data);
+    }
+
+    /**
+     * Экспортирует документ в файл формата "One".
+     * @param file_name Имя файла.
+     * @return true - выполнено успешно, false - ошибка.
+     */
+    bool export_format_one(std::string file_name) {
+        return model_->export_document(std::make_shared<ExporterOne>(file_name));
+    }
+
+    /**
+     * Экспортирует документ в файл формата "Two".
+     * @param file_name Имя файла.
+     * @return true - выполнено успешно, false - ошибка.
+     */
+    bool export_format_two(std::string file_name) {
+        return model_->export_document(std::make_shared<ExporterTwo>(file_name));
+    }
+
+    /**
+     * Импортирует документ из файла формата "One".
+     * @param file_name Имя файла.
+     * @return true - выполнено успешно, false - ошибка.
+     */
+    bool import_format_one(std::string file_name) {
+        return model_->import_document(std::make_shared<ImporterOne>(file_name));
+    }
+
+    /**
+     * Импортирует документ из файла формата "Two".
+     * @param file_name Имя файла.
+     * @return true - выполнено успешно, false - ошибка.
+     */
+    bool import_format_two(std::string file_name) {
+        return model_->import_document(std::make_shared<ImporterTwo>(file_name));
+    }
+
+    /**
      * Удаляет примитив.
-     * @param handler Хендлер удаляемого примитива
+     * @param handler Идентификатор удаляемого примитива.
      */
     void delete_primitive(handler_t handler) {
         model_->delete_primitive(handler);
-        view_->redraw();
     }
 
-    /**
-     * Выдает указатель на созданный примитив.
-     * @param handler Хендлер созданного примитива.
-     * @param primitive Указатель на созданный примитив.
-     * @return true - примитив найден, false - примитив не найден.
-     */
-    bool get_primitive(handler_t handler, primitive_t *primitive) {
-        return model_->get_primitive(handler, primitive);
-    }
-
-    /**
-     * Импортировать документ.
-     * @param importer Указатель на импортер.
-     * @return true - ипорт прошел удачно, false - импорт не возможен.
-     */
-    bool import_document(std::shared_ptr<AImporter> importer) {
-        if(model_->import_document(importer)) {
-            view_->redraw();
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Экспортировать документ.
-     * @param exporter Указатель на экспортер.
-     * @return true - экспорт прошел удачно, false - экспорт не возможен.
-     */
-    bool export_document(std::shared_ptr<AExporter> exporter) {
-        return model_->export_document(exporter);
-    }
-
-    /**
-     * Очистить документ.
-     */
+    /// Очистить документ.
     void clear() {
         model_->clear();
-        view_->redraw();
     }
 
     /// Перерисовывает документ.
     void redraw() {
-        view_->redraw();
+        model_->redraw();
     }
 
 private:
     std::shared_ptr<DocumentModel> model_{nullptr};
-    std::shared_ptr<DocumentView>  view_{nullptr};
 };
 

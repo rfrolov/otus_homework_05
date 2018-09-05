@@ -1,37 +1,34 @@
 #include "document/DocumentController.h"
-#include "primitives/Dot.h"
-#include "primitives/Line.h"
-#include "primitives/Triangle.h"
-#include "converter/ExporterOne.h"
-#include "converter/ImporterOne.h"
 
 int main() {
     std::cout << std::endl << "Create document:" << std::endl;
 
-    auto model = std::make_shared<DocumentModel>();
-    auto view  = std::make_shared<DocumentView>(model);
-
-    DocumentController document_control = DocumentController(model, view);
+    auto view  = std::make_shared<DocumentView>();
+    auto model = std::make_shared<DocumentModel>(view);
+    DocumentController document_control = DocumentController(model);
 
 
     std::cout << std::endl << "Add dot:" << std::endl;
-    document_control.add_primitive(std::make_shared<Dot>(Coordinates(1, 2)));
+    document_control.add_dot(Coordinates{1, 2});
 
 
     std::cout << std::endl << "Add line:" << std::endl;
-    auto line_h = document_control.add_primitive(std::make_shared<Line>(Line::coordinates_t{Coordinates(1, 2), Coordinates(3, 4)}));
+    Coordinates line_coordinates[2] = {Coordinates{1, 2}, Coordinates{3, 4}};
+    auto line_h = document_control.add_line(line_coordinates);
 
 
     std::cout << std::endl << "Add triangle:" << std::endl;
-    document_control.add_primitive(std::make_shared<Triangle>(Triangle::coordinates_t{Coordinates(1, 2), Coordinates(3, 4), Coordinates(5, 6)}));
+    Coordinates triangle_coordinates[3] = {Coordinates{1, 2}, Coordinates{3, 4}, Coordinates{5, 6}};
+    document_control.add_triangle(triangle_coordinates);
 
 
     std::cout << std::endl << "Modify line:" << std::endl;
-    std::shared_ptr<IPrimitive> line{};
-    auto isOk = document_control.get_primitive(line_h, &line);
-    if(isOk) {
-        line->set_data(Line::serialised_t{2, 1001, 1002, 1003, 1004});
-    }
+    line_coordinates[0] = Coordinates{1001, 1002};
+    line_coordinates[1] = Coordinates{1003, 1004};
+    document_control.modify_line(line_h, line_coordinates);
+
+
+    std::cout << std::endl << "Redraw:" << std::endl;
     document_control.redraw();
 
 
@@ -40,7 +37,7 @@ int main() {
 
 
     std::cout << std::endl << "Export:";
-    if (document_control.export_document(std::make_shared<ExporterOne>("test.txt"))) {
+    if (document_control.export_format_one("test.txt")) {
         std::cout << std::endl << "OK" << std::endl;
     } else {
         std::cout << std::endl << "error" << std::endl;
@@ -52,10 +49,17 @@ int main() {
 
 
     std::cout << std::endl << "Import:" << std::endl;
-    document_control.import_document(std::make_shared<ImporterOne>("test.txt"));
+    document_control.import_format_one("test.txt");
 
 
-    std::cout << std::endl << "Add triangle:" << std::endl;
-    document_control.add_primitive(std::make_shared<Line>(Line::coordinates_t{Coordinates(7, 8), Coordinates(9, 10)}));
+    std::cout << std::endl << "Add line:" << std::endl;
+    line_coordinates[0] = Coordinates{7, 8};
+    line_coordinates[1] = Coordinates{9, 10};
+    document_control.add_line(line_coordinates);
+
+
+    std::cout << std::endl << "Redraw:" << std::endl;
+    document_control.redraw();
+
     return 0;
 }
